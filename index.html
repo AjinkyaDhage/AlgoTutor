@@ -1,0 +1,2026 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" >  
+		
+		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<script src="js/utilities.js"></script>
+		<link rel="stylesheet" href="css/basic.css" />
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sons-of-obsidian"></script>
+	</head>
+	<body>
+		<!-- Start of Home page -->
+		<div data-role="page" data-theme="a" id="home"> 
+			<div data-role="header" data-theme="b">
+				<h1 class="header-title">AlgoTutor</h1>
+				<div>
+					<a class="ui-shadow-icon ui-btn ui-btn-left ui-corner-all ui-btn-icon-center ui-icon-arrow-l ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" data-rel= "back"></a>
+					<a class="ui-shadow-icon ui-btn ui-btn-right ui-corner-all ui-btn-icon-center ui-icon-bars ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" href="#panelArea"></a>
+				</div>
+				<div data-role="panel" id="panelArea" data-theme="a" data-display="overlay" data-position="right"> 
+					<a href="#home" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-home ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Home</a></br>
+					<a href="#algorithms" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-bullets ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Main Menu</a></br>
+					<a href="#learnAlgorithm" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Learn A-Star</a></br>
+					<a href="#executeAlgorithm" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-star ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Implement and Execute A-Star</a></br>
+					<a href="#quizHome" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-check ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Take Quiz</a>
+					<a href="#help" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-user ui-btn-icon-left ui-btn-b ui-shadow" data-theme="b">Help</a>
+				</div>
+				
+				<div class="header-banner">
+					<div class="inner">
+						<div class="banner-data">
+							<h1>AlgoTutor</h1>
+							<h2>An Easy Way To Learn Complex Algorithms</h2>
+							<a class="ui-btn ui-corner-all ui-btn-a" href="#algorithms">GET STARTED</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="content">
+				<h2>About AlgoTutor</h2>
+				<p>AlgoTutor is a web application that helps the users to learn the complex algorithms in the field of Data Structures and Artificial Intelligence. Hence, students, teachers, tech enthusiasts or individuals working in the field of technology can use this application to learn algorithms. The main aim of this application is to help users to completely understand the algorithm. To achieve this, the application in divided into three main sections, viz. Learn, Execute, and Assessment. </p>
+			</div><!-- /content -->
+			<div data-role="footer" data-theme="b" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li> <a href="#home" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-home ui-btn-b ui-shadow">Home</a></li>
+						<li> <a href="#learnAlgorithm" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-info ui-btn-b ui-shadow">Learn</a></li>
+						<li> <a href="#executeAlgorithm" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-star ui-btn-b ui-shadow">Implement</a></li>
+						<li> <a href="#quizHome" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-check ui-btn-b ui-shadow">Assess</a></li>
+					</ul>
+				</div>
+
+				<h4 class="wrap">
+					Developed By: Ajinkya Dhage, Student ID: 14178051
+				</h4>
+			</div><!-- /Footer -->
+		</div><!-- /page -->
+
+		<!-- Start of Algorithms page -->
+		<div data-role="page" data-theme="a" id="algorithms"> 
+			<div data-role="header" data-theme="b">
+				<h1>AlgoTutor</h1>
+				<div>
+					<a class="ui-shadow-icon ui-btn ui-btn-left ui-corner-all ui-btn-icon-center ui-icon-arrow-l ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" data-rel= "back"></a>
+					<a class="ui-shadow-icon ui-btn ui-btn-right ui-corner-all ui-btn-icon-center ui-icon-bars ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" href="#panelArea1"></a>
+				</div>
+				<div data-role="panel" id="panelArea1" data-theme="a" data-display="overlay" data-position="right"> 
+					<a href="#home" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-home ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Home</a></br>
+					<a href="#algorithms" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-bullets ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Main Menu</a></br>
+					<a href="#learnAlgorithm" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Learn A-Star</a></br>
+					<a href="#executeAlgorithm" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-star ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Implement and Execute A-Star</a></br>
+					<a href="#quizHome" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-check ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Take Quiz</a>
+					<a href="#help" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-user ui-btn-icon-left ui-btn-b ui-shadow" data-theme="b">Help</a>
+				</div>
+				
+				<div class="common-banner">
+					<div class="inner">
+						<div class="banner-data">
+							<h1>Main Menu</h1>
+							<h2>Learn, Implement, Execute and Assess</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="content">
+				<a href="#learnAlgorithm" class="wrap ui-shadow-icon ui-corner-all ui-btn ui-btn-icon-right ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Learn A-Star Algorithm</a>
+
+				<a href="#executeAlgorithm" class="wrap ui-shadow-icon ui-corner-all ui-btn ui-btn-icon-right ui-icon-star ui-btn-b ui-shadow"  data-theme="b">Implement and Execute A-Star Algorithm</a>
+
+				<a href="#quizHome" class="wrap ui-shadow-icon ui-btn ui-corner-all ui-btn-icon-right ui-icon-check ui-btn-b ui-shadow"  data-theme="b" style="margin-bottom: 100px">Take Assessment Quiz</a>
+
+			</div><!-- /content -->
+			<div data-role="footer" data-theme="b" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li> <a href="#home" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-home ui-btn-b ui-shadow">Home</a></li>
+						<li> <a href="#learnAlgorithm" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-info ui-btn-b ui-shadow">Learn</a></li>
+						<li> <a href="#executeAlgorithm" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-star ui-btn-b ui-shadow">Implement</a></li>
+						<li> <a href="#quizHome" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-check ui-btn-b ui-shadow">Assess</a></li>
+					</ul>
+				</div>
+
+				<h4 class="wrap">
+					Developed By: Ajinkya Dhage, Student ID: 14178051
+				</h4>
+			</div><!-- /Footer -->
+		</div><!-- /page -->
+
+		<!-- Start of Learn Algorithm page -->
+		<div data-role="page" data-theme="a" id="learnAlgorithm"> 
+			<div data-role="header" data-theme="b">
+				<h1>AlgoTutor</h1>
+				<div>
+					<a class="ui-shadow-icon ui-btn ui-btn-left ui-corner-all ui-btn-icon-center ui-icon-arrow-l ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" data-rel= "back"></a>
+					<a class="ui-shadow-icon ui-btn ui-btn-right ui-corner-all ui-btn-icon-center ui-icon-bars ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" href="#panelArea2"></a>
+				</div>
+				<div data-role="panel" id="panelArea2" data-theme="a" data-display="overlay" data-position="right"> 
+					<a href="#home" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-home ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Home</a></br>
+					<a href="#algorithms" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-bullets ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Main Menu</a></br>
+					<a href="#learnAlgorithm" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Learn A-Star</a></br>
+					<a href="#executeAlgorithm" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-star ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Implement and Execute A-Star</a></br>
+					<a href="#quizHome" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-check ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Take Quiz</a>
+					<a href="#help" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-user ui-btn-icon-left ui-btn-b ui-shadow" data-theme="b">Help</a>
+				</div>
+				
+				<div class="common-banner">
+					<div class="inner">
+						<div class="banner-data">
+							<h1>Learn A-Star</h1>
+							<h2>Go through the following concepts to learn A-Star<h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="content">
+     			<div data-role="collapsibleset" data-theme="b">
+	   				<div data-role="collapsible" data-theme="b" data-content-theme="a" data-collapsed-icon="carat-d" 
+	   				data-expanded-icon="carat-u">
+	   					<h2 class="wrap">1. Algorithm Introduction</h2>
+	   					<p>A-star Algorithm which is also known as best-first search algorithm is a complete and optimal algorithm, used for solving problems by 						searching in Artificial Intelligence. To understand the working of A-star algorithm, let us first understand what 						  solving problems by searching is [1].
+	   					</p>
+	   				</div>
+
+	   				<div data-role="collapsible" data-theme="b" data-content-theme="a" data-collapsed-icon="carat-d" 
+	   				data-expanded-icon="carat-u">
+	   					<h2 class="wrap">2. Solving Problems</h2>
+	   					<p>A problem in AI is formulated using following metrics:</br></br>
+							•	<strong>States:</strong> States describe the environment and the agent attributes in which an agent is acting upon to solve the given problem.</br> 
+							•	<strong>Initial State:</strong> This is the state of the environment and an agent in the beginning.</br>
+							•	<strong>Goal state:</strong> The final state where the agent aims to reach.</br>
+							•	<strong>Actions:</strong> The actions that an agent can perform to reach to the goal state.</br>
+							•	<strong>Path cost:</strong> The cost corresponding to each action of an agent.</br>
+						</p>
+						<p>Goal of the agent is to reach the goal state using allowed actions optimizing the cost function.</p>
+	   				</div>
+
+	   				<div data-role="collapsible" data-theme="b" data-content-theme="a" data-collapsed-icon="carat-d" 
+	   				data-expanded-icon="carat-u">
+	   					<h2>3. Strategies</h2>
+	   					<p>There are following two strategies for solving problems by searching.</p>
+
+						<p class="b-text">1)	Uninformed Search Strategies:</p>
+
+						<p>These strategies are also called as blind search strategies, as the agent does not have any additional information about the states, other than the problem definition. The agent does not have ability to decide if one non-goal state is more efficient than another. Hence, these strategies keep on generating the successor nodes until they reach goal state. The agent may get stuck in the infinite loop because of this approach. Breadth First Search (BFS), Depth First Search (DFS), Depth Limited Search, Uniform Cost Search, Iterative Deepening Search and Bidirectional Search are the uninformed search strategies.</p>
+
+						<p class="b-text">2)	Informed or Heuristic Search Strategies:</p>
+
+						<p>In Informed Search strategies, the agent expands the current node based on an Evaluation Function f(n), optimizing the cost of the search. Hence, the node with the lowest cost value is expanded first. These strategies are also called as Heuristic Search Strategies as they use a heuristic function h(n), as a component of function f, which gives the estimated cost of the cheapest path from the current state to the goal state. Greedy Best First Search, Recursive Best First Search (RBFS) and A-star Search are the examples of Informed Search Strategies.</p>
+	   				</div>
+
+	   				<div data-role="collapsible" data-theme="b" data-content-theme="a" data-collapsed-icon="carat-d" 
+	   				data-expanded-icon="carat-u">
+	   					<h2>4. Concepts and Example</h2>
+						<p>A-star is a complete and optimal algorithm used for solving problems by searching. It uses function f(n) which is combination of a function g(n), that gives cost to reach the node and a heuristic function h(n), which is the cost to reach the goal state from the node, to evaluate a current node represented as follows.
+						</p>
+
+						<p class="b-text">F(n) = g(n) + h(n)</p>
+
+						<p>A-star algorithm performs repeated state checking, assuming that the search space is a graph. This helps to prevent the agent from entering infinite loop. To achieve this a CLOSED LIST (list of nodes that are already expanded) and OPEN LIST (list of nodes that need to be expanded) is implemented and updated during each iteration. </p>
+
+						<p class="b-text">Example</p>
+
+						<p>The Heuristic used for the below example and algorithm [2] is Manhattan Distance. Manhattan distance is the direct distance from a node to the goal state. Hence, it is assumed that there are no obstacles (wall) between node and a goal state while calculating Manhattan distance. Hence, for the start position of the brick, the heuristic value is h = 3, as in 3 moves it will reach the goal state if the wall is not present in between. If h represents Manhattan distance, and g represents the distance of node from start or root node, then in each iteration f = g + h is calculated and node with minimum f is considered as the best node.
+						</p>
+
+						<h3>Algorithm:</h3>
+						<pre class="prettyprint">
+ Start.g = 0;
+ Start.h = heuristic(Start)
+ OPEN	 = [Start];
+ CLOSED	 = []
+ 
+ WHILE OPEN is not empty
+ N= OPEN.removeLowestF()
+ 
+ IF goal(N)
+ RETURN path to N
+ 
+ CLOSED.add(N)
+ FOR all children M of N
+ not in CLOSED:
+ M.parent	= N
+ M.g		= N.g+ 1;
+ M.h		= heuristic(M)
+ OPEN.add(M)
+ END FOR
+
+ END WHILE
+						</pre>
+						<p id="popupPosition" class="b-text">Sliding a brick to its Goal State:</p>
+						<p>Consider the following scenario is which a brick is to be slid to its goal position. Each Image represents single step which is corresponding to each iteration of the above algorithm. A-Star algorithm uses a search tree concept and expands each node to find next best node. Click on the following images sequentially to understand the expansion and node search process.
+						</p>
+
+						<div data-role="controlgroup" data-type="horizontal" style="text-align: center;">
+							<a href="#step1" data-transition="pop" class="algo-steps" data-rel="popup" data-position-to="#popupPosition"><img src="icons/example1.png" class="algo-image ui-li-thumb ui-shadow"></a>
+
+							<a href="#step2" data-transition="pop" class="algo-steps" data-rel="popup" data-position-to="#popupPosition"><img src="icons/example2.png" class="algo-image ui-li-thumb ui-shadow"></a>
+
+							<a href="#step3" data-transition="pop" class="algo-steps" data-rel="popup" data-position-to="#popupPosition"><img src="icons/example3-5.png" class="algo-image ui-li-thumb ui-shadow"></a>
+
+							<a href="#step4" data-transition="pop" class="algo-steps" data-rel="popup" data-position-to="#popupPosition"><img src="icons/example3.png" class="algo-image ui-li-thumb ui-shadow"></a>
+						</div>
+
+						<div data-role="controlgroup" data-type="horizontal" style="text-align: center;">
+							<a href="#step5" data-transition="pop" class="algo-steps" data-rel="popup" data-position-to="#popupPosition"><img src="icons/example4.png" class="algo-image ui-li-thumb ui-shadow"></a>
+
+							<a href="#step6" data-transition="pop" class="algo-steps" data-rel="popup" data-position-to="#popupPosition"><img src="icons/example5.png" class="algo-image ui-li-thumb ui-shadow"></a>
+
+							<a href="#step7" data-transition="pop" class="algo-steps" data-rel="popup" data-position-to="#popupPosition"><img src="icons/example6.png" class="algo-image ui-li-thumb ui-shadow"></a>
+
+							<a href="#step8" data-transition="pop" class="algo-steps" data-rel="popup" data-position-to="#popupPosition"><img src="icons/example7.png" class="algo-image ui-li-thumb ui-shadow"></a>
+						</div>
+
+						<div data-role="controlgroup" data-type="horizontal" style="text-align: center;">
+							<a href="#step9" data-transition="pop" class="algo-steps" data-rel="popup" data-position-to="#popupPosition"><img src="icons/example8.png" class="algo-image ui-li-thumb ui-shadow"></a>
+
+							<a href="#step10" data-transition="pop" class="algo-steps" data-rel="popup" data-position-to="#popupPosition"><img src="icons/example9.png" class="algo-image ui-li-thumb ui-shadow"></a>
+
+							<a href="#step11" data-transition="pop" class="algo-steps" data-rel="popup" data-position-to="#popupPosition"><img src="icons/example10.png" class="algo-image ui-li-thumb ui-shadow"></a>
+
+							<a href="#step12" data-transition="pop" class="algo-steps" data-rel="popup" data-position-to="#popupPosition"><img src="icons/example11.png" class="algo-image ui-li-thumb ui-shadow"></a>
+						</div>
+
+	   				</div>
+	   				<div data-role="collapsible" data-theme="b" data-content-theme="a" data-collapsed-icon="carat-d" 
+	   				data-expanded-icon="carat-u">
+	   					<h2>5. Applications</h2>
+                        <p>There are various applications of A-Star Algorithm. As the A-Star Algorithm is capable of finding the cheapest or the shortest path, generally it is used to solve search problems in which an agent has to find the most efficient path to reach the goal state. AlgoTutor uses A-Star Algorithm to solve sliding brick puzzle which is one of its applications. In this puzzle, the goal is to move the master brick to its goal position, but to achieve this, other obstacle bricks are to be moved in such a way that it will be easy for master brick to reach the goal state.</p>
+                        
+                        <p>This algorithm can be used as a path finding tools in various games, map applications, and robotics as well. Check the following videos in which the A-Star is used to implement the path finder for a game and for a robotic vehicle.</p>
+                        <div data-role="controlgroup" data-type="horizontal" style="text-align: center;">
+                            
+                                <iframe src="https://www.youtube.com/embed/0TkqXhtHaso?ecver=2" frameborder="0" allowfullscreen>
+                                </iframe>
+                            
+                                <iframe src="https://www.youtube.com/embed/qXZt-B7iUyw?ecver=2" frameborder="0" allowfullscreen>
+                                </iframe>
+                            
+                        </div>
+	   				</div>
+	   				<div data-role="collapsible" data-theme="b" data-content-theme="a" data-collapsed-icon="carat-d" 
+	   				data-expanded-icon="carat-u">
+	   					<h2>6. References</h2>
+	   					<p class="b-text">1)	Artificial Intelligence, A Modern Approach – Third Edition </br></br>
+						   2)	Marcello Balduccini, College of Computing and Informatics, Drexel University</br></br>
+                           3) Video 1 - A* pathfinding with C#, game programming for AI (A-Star algorithm) https://www.youtube.com/watch?v=0TkqXhtHaso</br></br>
+                           4) Video 2 - A* in Action - Artificial Intelligence for Robotics https://www.youtube.com/watch?v=qXZt-B7iUyw</br></br>
+                           5) Code snippet background theme css - Google Code Prettify - https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sons-of-obsidian"
+						</p>
+	   				</div>
+	   			</div>
+	   			<div style="text-align: center; margin-bottom: 100px;">
+					<a href="#executeAlgorithm" class="wrap ui-btn ui-corner-all ui-btn-b ui-icon-arrow-r ui-btn-icon-right ui-shadow-icon ui-btn-inline" data-theme="b">Proceed To Implement and Execute A-Star</a>
+				</div>
+			</div><!-- /content -->
+
+			<div data-role="popup" id="step1" class="ui-content algo-popup-img" data-theme="a" data-overlay-theme="a" data-corners="true">
+				<div class="algo-image-header" data-role="header" data-theme="b">
+					<h2>Initialization</h2>
+				</div> 
+				<a href="#" data-rel="back" class="ui-shadow-icon ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-b ui-btn-icon-notext ui-btn-left">Close</a>
+				<img src="images/example1.png">
+			</div>
+
+			<div data-role="popup" id="step2" class="ui-content algo-popup-img" data-theme="a" data-overlay-theme="a" data-corners="true">
+				<div class="algo-image-header" data-role="header" data-theme="b">
+					<h2>Step 1</h2>
+				</div> 
+				<a href="#" data-rel="back" class="ui-shadow-icon ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-b ui-btn-icon-notext ui-btn-left">Close</a>
+				<img src="images/example2.png">
+			</div>
+
+			<div data-role="popup" id="step3" class="ui-content algo-popup-img" data-theme="a" data-overlay-theme="a" data-corners="true">
+				<div class="algo-image-header" data-role="header" data-theme="b">
+					<h2>Step 2</h2>
+				</div> 
+				<a href="#" data-rel="back" class="ui-shadow-icon ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-b ui-btn-icon-notext ui-btn-left">Close</a>
+				<img src="images/example3.5.png">
+			</div>
+
+			<div data-role="popup" id="step4" class="ui-content algo-popup-img" data-theme="a" data-overlay-theme="a" data-corners="true">
+				<div class="algo-image-header" data-role="header" data-theme="b">
+					<h2>Step 3</h2>
+				</div> 
+				<a href="#" data-rel="back" class="ui-shadow-icon ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-b ui-btn-icon-notext ui-btn-left">Close</a>
+				<img src="images/example3.png">
+			</div>
+
+			<div data-role="popup" id="step5" class="ui-content algo-popup-img" data-theme="a" data-overlay-theme="a" data-corners="true">
+				<div class="algo-image-header" data-role="header" data-theme="b">
+					<h2>Step 4</h2>
+				</div> 
+				<a href="#" data-rel="back" class="ui-shadow-icon ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-b ui-btn-icon-notext ui-btn-left">Close</a>
+				<img src="images/example4.png">
+			</div>
+
+			<div data-role="popup" id="step6" class="ui-content algo-popup-img" data-theme="a" data-overlay-theme="a" data-corners="true">
+				<div class="algo-image-header" data-role="header" data-theme="b">
+					<h2>Step 5</h2>
+				</div> 
+				<a href="#" data-rel="back" class="ui-shadow-icon ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-b ui-btn-icon-notext ui-btn-left">Close</a>
+				<img src="images/example5.png">
+			</div>
+
+			<div data-role="popup" id="step7" class="ui-content algo-popup-img" data-theme="a" data-overlay-theme="a" data-corners="true">
+				<div class="algo-image-header" data-role="header" data-theme="b">
+					<h2>Step 6</h2>
+				</div> 
+				<a href="#" data-rel="back" class="ui-shadow-icon ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-b ui-btn-icon-notext ui-btn-left">Close</a>
+				<img src="images/example6.png">
+			</div>
+
+			<div data-role="popup" id="step8" class="ui-content algo-popup-img" data-theme="a" data-overlay-theme="a" data-corners="true">
+				<div class="algo-image-header" data-role="header" data-theme="b">
+					<h2>Step 7</h2>
+				</div> 
+				<a href="#" data-rel="back" class="ui-shadow-icon ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-b ui-btn-icon-notext ui-btn-left">Close</a>
+				<img src="images/example7.png">
+			</div>
+
+			<div data-role="popup" id="step9" class="ui-content algo-popup-img" data-theme="a" data-overlay-theme="a" data-corners="true">
+				<div class="algo-image-header" data-role="header" data-theme="b">
+					<h2>Step 8</h2>
+				</div> 
+				<a href="#" data-rel="back" class="ui-shadow-icon ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-b ui-btn-icon-notext ui-btn-left">Close</a>
+				<img src="images/example8.png">
+			</div>
+
+			<div data-role="popup" id="step10" class="ui-content algo-popup-img" data-theme="a" data-overlay-theme="a" data-corners="true">
+				<div class="algo-image-header" data-role="header" data-theme="b">
+					<h2>Step 9</h2>
+				</div> 
+				<a href="#" data-rel="back" class="ui-shadow-icon ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-b ui-btn-icon-notext ui-btn-left">Close</a>
+				<img src="images/example9.png">
+			</div>
+
+			<div data-role="popup" id="step11" class="ui-content algo-popup-img" data-theme="a" data-overlay-theme="a" data-corners="true">
+				<div class="algo-image-header" data-role="header" data-theme="b">
+					<h2>Step 10</h2>
+				</div> 
+				<a href="#" data-rel="back" class="ui-shadow-icon ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-b ui-btn-icon-notext ui-btn-left">Close</a>
+				<img src="images/example10.png">
+			</div>
+
+			<div data-role="popup" id="step12" class="ui-content algo-popup-img" data-theme="a" data-overlay-theme="a" data-corners="true">
+				<div class="algo-image-header" data-role="header" data-theme="b">
+					<h2>Step 11</h2>
+				</div> 
+				<a href="#" data-rel="back" class="ui-shadow-icon ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-b ui-btn-icon-notext ui-btn-left">Close</a>
+				<img src="images/example11.png">
+			</div>
+
+			<div data-role="footer" data-theme="b" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li> <a href="#home" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-home ui-btn-b ui-shadow">Home</a></li>
+						<li> <a href="#learnAlgorithm" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-info ui-btn-b ui-shadow">Learn</a></li>
+						<li> <a href="#executeAlgorithm" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-star ui-btn-b ui-shadow">Implement</a></li>
+						<li> <a href="#quizHome" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-check ui-btn-b ui-shadow">Assess</a></li>
+					</ul>
+				</div>
+
+				<h4 class="wrap">
+					Developed By: Ajinkya Dhage, Student ID: 14178051
+				</h4>
+			</div><!-- /Footer -->
+
+		</div><!-- /page -->
+
+
+		<!-- Start of Execute Algorithm page -->
+		<div data-role="page" data-theme="a" id="executeAlgorithm"> 
+			<div data-role="header" data-theme="b">
+				<h1>AlgoTutor</h1>
+				<div>
+					<a class="ui-shadow-icon ui-btn ui-btn-left ui-corner-all ui-btn-icon-center ui-icon-arrow-l ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" data-rel= "back"></a>
+					<a class="ui-shadow-icon ui-btn ui-btn-right ui-corner-all ui-btn-icon-center ui-icon-bars ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" href="#panelArea3"></a>
+				</div>
+				<div data-role="panel" id="panelArea3" data-theme="a" data-display="overlay" data-position="right"> 
+					<a href="#home" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-home ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Home</a></br>
+					<a href="#algorithms" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-bullets ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Main Menu</a></br>
+					<a href="#learnAlgorithm" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Learn A-Star</a></br>
+					<a href="#executeAlgorithm" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-star ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Implement and Execute A-Star</a></br>
+					<a href="#quizHome" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-check ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Take Quiz</a>
+					<a href="#help" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-user ui-btn-icon-left ui-btn-b ui-shadow" data-theme="b">Help</a>
+				</div>
+				
+				<div class="common-banner">
+					<div class="inner">
+						<div class="banner-data">
+							<h1>Implement and Execute A-Star</h1>
+							<h2>Access following code snippets to implement A-Star Algorithm</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="content">
+				<div data-role="collapsibleset" data-theme="b">
+					<div data-role="collapsible" data-theme="b" data-content-theme="a" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+						<h2 class="wrap">1. Implement A-Star</h2>
+						<p><strong>AlgoTutor implements A-Star Algorithm using following three java classes: </strong></p>
+
+								<p><strong>1)	Brick.java</strong></p>
+								
+								<p>This class encapsulates all the attributes of a brick such as Brick Number, Start Index, End Index, Brick Area, and whether the brick is a master brick or not. It also checks if a brick is movable at a particular instance or not. After every iteration, a call to the method in this class is made to check if master brick can be moved to the goal state or not. In the implementation given below, Brick.java is main class and to Implement and Execute the A-Star algorithm at your local machine, copy the code snippets and execute Brick.java class. </p>
+								
+								<p><strong>2)	Node.java</strong></p>
+								
+								<p>This class represents the structure of a puzzle using an integer matrix. Each node has width, height, depth, estimated cost, and possible moves attributes. </p>
+								
+								<p><strong>3)	AStarAlgorithm.java</strong></p>
+								
+								<p>This class has all the business logic required to implement the A-Star Algorithm. This class uses utilities provided by above two classes and implements the A-Star Algorithm. </p>
+						<div data-role="collapsibleset" data-theme="b">
+							<div data-role="collapsible" data-content-theme="a" data-collapsed-icon="plus" data-expanded-icon="minus">
+								<h2>AStarAlgorithm.java</h2>
+
+								<pre class="prettyprint"><code class="language-java">
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+public class AStarAlgorithm {
+
+private int width = 0;
+private int height = 0;
+private int[][] initialState;
+
+public AStarAlgorithm() {
+}
+
+public AStarAlgorithm(int[][] 
+initialState) {
+this.width = initialState[0].length;
+this.height = initialState.length;
+this.initialState = initialState;
+}
+
+public int getWidth() {
+return width;
+}
+
+public void setWidth(int width) {
+this.width = width;
+}
+
+public int getHeight() {
+return height;
+}
+
+public void setHeight(int height) {
+this.height = height;
+}
+
+public int[][] getInitialState() {
+return initialState;
+}
+
+public void setInitialState(int[][]
+ initialState) {
+this.initialState = initialState;
+}
+
+void printGameState(int[][] gameState){
+System.out.println("\n" + width + ","
+ + height + ",\n");
+for(int i=0;i<height;i++){
+for(int j=0;j<width;j++){
+System.out.print(gameState[i][j] + ",");
+}
+System.out.println();
+}
+System.out.println();
+}
+
+void normalizeGameState(int[][]
+ gameState){
+int nextIdx = 3,i=0,j=0;
+for(i = 0;i < height;i++) {
+for(j = 0;j < width;j++) {
+if (gameState[i][j]==nextIdx) {
+nextIdx++;
+} else if (gameState[i][j] > nextIdx) {
+swapIndex(gameState,
+ nextIdx,gameState[i][j]);
+nextIdx++;
+}
+}
+}
+}
+
+void swapIndex(int[][] gameState, 
+int index1, int index2){
+int i=0,j=0;
+for(i = 0;i < height;i++) {
+for(j = 0;j < width;j++) {
+if (gameState[i][j]==index1) {
+gameState[i][j]=index2;
+} else if (gameState[i][j]==index2)
+{
+gameState[i][j]=index1;
+}
+}
+}
+}
+
+public int[][] getCloneState(int[][]
+ state){
+int[][] cloneState = new int[height][width];
+for(int index=0;index<height;index++){
+cloneState[index] = new int[width];
+for(int colIndex=0;colIndex<width;colIndex++){
+cloneState[index][colIndex] =
+ (state[index][colIndex]);
+}
+}
+return cloneState;
+}
+
+int[][] generateMove(Brick brick,
+ int[][] gameState, int action){
+int[][] cloneState=getCloneState(gameState);
+int[] startIndex=brick.getStartIndex();
+int[] endIndex=brick.getEndIndex();
+
+switch (action) {
+case 1:
+moveUp(startIndex,endIndex,
+ cloneState,brick);
+break;
+case 2:
+moveDown(startIndex, endIndex,
+ cloneState, brick);
+break;
+case 3:
+moveLeft(startIndex, endIndex,
+ cloneState, brick);
+break;
+case 4:
+moveRight(startIndex, endIndex,
+ cloneState, brick);
+break;
+default:
+break;
+}
+return cloneState;
+}
+
+void moveUp(int[] startIndex, 
+int[] endIndex, int[][] gameState,
+ Brick brick){
+int j=0;
+for(j=startIndex[1];j<=endIndex[1];j++){
+gameState[endIndex[0]][j]=0;
+}
+startIndex[0]=startIndex[0]-1;
+endIndex[0]=endIndex[0]-1;
+brick.setStartIndex(startIndex);
+brick.setEndIndex(endIndex);
+for(j=startIndex[1];j<=endIndex[1];j++){
+gameState[startIndex[0]][j]
+=brick.getBrickNumber();
+}
+}
+
+void moveDown(int[] startIndex,
+ int[] endIndex, int[][] gameState,
+ Brick brick){
+int j=0;
+for(j=startIndex[1];j<=endIndex[1];j++){
+gameState[startIndex[0]][j]=0;
+}
+startIndex[0]=startIndex[0]+1;
+endIndex[0]=endIndex[0]+1;
+brick.setStartIndex(startIndex);
+brick.setEndIndex(endIndex);
+for(j=startIndex[1];j<=endIndex[1];j++){
+gameState[endIndex[0]][j]
+=brick.getBrickNumber();
+}
+}
+
+void moveLeft(int[] startIndex, int[] 
+endIndex, int[][] gameState, Brick brick){
+int j=0;
+for(j=startIndex[0];j<=endIndex[0];j++){
+gameState[j][endIndex[1]]=0;
+}
+startIndex[1]=startIndex[1]-1;
+endIndex[1]=endIndex[1]-1;
+brick.setStartIndex(startIndex);
+brick.setEndIndex(endIndex);
+for(j=startIndex[0];j<=endIndex[0];j++){
+gameState[j][startIndex[1]]
+=brick.getBrickNumber();
+}
+}
+
+void moveRight(int[] startIndex, 
+int[] endIndex, int[][] gameState, 
+Brick brick){
+int j=0;
+for(j=startIndex[0];j<=endIndex[0];j++){
+gameState[j][startIndex[1]]=0;
+}
+startIndex[1]=startIndex[1]+1;
+endIndex[1]=endIndex[1]+1;
+brick.setStartIndex(startIndex);
+brick.setEndIndex(endIndex);
+for(j=startIndex[0];j<=endIndex[0];j++){
+gameState[j][endIndex[1]]
+=brick.getBrickNumber();
+}
+}
+
+Set<Brick> creatBrickStructure(int[][]
+ gameState){
+int row=1, col=1;
+int[][] originalGameState=getCloneState(gameState);
+Set<Brick> brickStructure
+ = new HashSet<>();
+do{
+int[] startIndex={row,col};
+int[] endIndex={-2,-2};
+int index=originalGameState[row][col];
+if(index!=0){
+originalGameState[row][col]=-2;
+int i=0,j=0;
+int brickArea=1;
+boolean isWallAhead=true;
+boolean isWallBelow=true;
+for(j=col+1;j<width-1;j++){
+isWallAhead=false;
+if(originalGameState[row][j]==index){
+originalGameState[row][j]=-2;
+++brickArea;
+}else{
+endIndex[1]=j-1;
+break;
+}
+}
+if(isWallAhead || j==width-1){
+endIndex[1]=j-1;
+}
+for(i=row+1;i<height-1;i++){
+isWallBelow=false;
+if(originalGameState[i][col]==index){
+originalGameState[i][col]=-2;
+++brickArea;
+}else{
+endIndex[0]=i-1;
+break;
+}
+}
+if(isWallBelow || i==height-1){
+endIndex[0]=i-1;
+}
+
+Brick brick = new Brick(index, 
+startIndex, endIndex);
+brickStructure.add(brick);
+int area=brick.getArea();
+if(brickArea!=area){
+for(i=row;i<=endIndex[0];i++){
+for(j=col;j<=endIndex[1];j++){
+	originalGameState[i][j]=-2;
+}
+}
+}
+col=endIndex[1];
+}
+do{
+col=(col+1)%(width-1);
+if(col==0){
+++row;
+col=1;
+}
+}while(originalGameState[row][col]==-2 || 
+originalGameState[row][col]==0);
+}while(row<height-1);
+return brickStructure;
+}
+
+String getMoveName(int move){
+String moveName="";
+switch (move) {
+case 1:
+moveName="up";
+break;
+
+case 2:
+moveName="down";
+break;
+
+case 3:
+moveName="left";
+break;
+
+case 4:
+moveName="right";
+break;
+
+default:
+break;
+}
+return moveName;
+}
+
+int getManhattanDistance(Brick 
+masterBrick, int[] goalLocation){
+int manhattanDistance=0;
+int x1=0,y1=0,x2=0,y2=0;
+int[] startIndex=masterBrick.getStartIndex();
+int[] endIndex=masterBrick.getEndIndex();
+x1=startIndex[0];
+y1=startIndex[1];
+x2=endIndex[0];
+y2=endIndex[1];
+
+int i=goalLocation[0],j=goalLocation[1];
+int location=goalLocation[2];
+switch (location) {
+case 1://goal state is on top wall.
+manhattanDistance=i>x1?i-x1:x1-i;
+manhattanDistance+=j>y1?j-y1:y1-j;
+break;
+case 2://goal state is on bottom wall.
+manhattanDistance=i>x2?i-x2:x2-i;
+manhattanDistance+=j>y1?j-y1:y1-j;
+break;
+case 3://goal state is on left wall.
+manhattanDistance=i>x1?i-x1:x1-i;
+manhattanDistance+=j>y1?j-y1:y1-j;
+break;
+case 4://goal state is on right wall.
+manhattanDistance=i>x1?i-x1:x1-i;
+manhattanDistance+=j>y2?j-y2:y2-j;
+break;
+default:
+break;
+}
+return manhattanDistance;
+}
+
+int getEuclideanDistance(Brick 
+masterBrick, int[] goalLocation){
+int euclideanDistance=0;
+int x1=0,y1=0,x2=0,y2=0;
+int[] startIndex=masterBrick.getStartIndex();
+int[] endIndex=masterBrick.getEndIndex();
+x1=startIndex[0];
+y1=startIndex[1];
+x2=endIndex[0];
+y2=endIndex[1];
+
+int i=goalLocation[0],j=goalLocation[1];
+int location=goalLocation[2];
+switch (location) {
+case 1://goal state is on top wall.
+euclideanDistance=(int)
+Math.floor(Math.sqrt((i-x1)*(i-x1)+(j-y1)*(j-y1)));
+
+break;
+case 2://goal state is on bottom wall.
+euclideanDistance=(int)
+Math.floor(Math.sqrt((i-x2)*(i-x2)+(j-y1)*(j-y1)));
+break;
+case 3://goal state is on left wall.
+euclideanDistance=(int)
+Math.floor(Math.sqrt((i-x1)*(i-x1)+(j-y1)*(j-y1)));
+break;
+case 4://goal state is on right wall.
+euclideanDistance=(int)
+Math.floor(Math.sqrt((i-x1)*(i-x1)+(j-y2)*(j-y2)));
+break;
+default:
+break;
+}
+return euclideanDistance;
+}
+
+int[] getMasterBrickLocation(int[][] 
+gameState){
+int[] masterBrickLocation={-1,-1,-1,-1};
+int i=0,j=0;
+for(i=0;i<height;i++){
+for(j=0;j<width;j++){
+if(gameState[i][j]==2){
+masterBrickLocation[0]=i;
+masterBrickLocation[1]=j;
+break;
+}
+}
+if(masterBrickLocation[0]!=-1){
+break;
+}
+}
+
+for(i=height-1;i>=0;i--){
+for(j=width-1;j>=0;j--){
+if(gameState[i][j]==2){
+masterBrickLocation[2]=i;
+masterBrickLocation[3]=j;
+break;
+}
+}
+if(masterBrickLocation[2]!=-1){
+break;
+}
+}
+
+return masterBrickLocation;
+}
+
+Brick getMasterBrick(int[][] gameState){
+Brick masterBrick = null;
+if(!isPuzzleSolved(gameState)){
+Set<Brick> brickStructure=
+creatBrickStructure(gameState);
+
+for(Brick brick: brickStructure){
+if(brick.isMasterBrick()){
+masterBrick = brick;
+break;
+}
+}
+}else{
+int[] masterBrickLocation = 
+getMasterBrickLocation(gameState);
+int[] startIndex={masterBrickLocation[0], 
+masterBrickLocation[1]};
+int[] endIndex={masterBrickLocation[2], 
+masterBrickLocation[3]};
+masterBrick = new Brick(2, startIndex, endIndex);
+}
+
+return masterBrick;
+}
+
+int[] getGoalLocation(){
+int[] goalLocation={0,0,-1};
+int i=0,j=0;
+for(j=0;j<width;j++){
+if(initialState[i][j]==-1){//goal state is on top wall.
+goalLocation=new int[]{i,j,1};
+return goalLocation;
+}
+}
+
+i=height-1;j=0;
+for(j=0;j<width;j++){
+if(initialState[i][j]==-1){
+//goal state is on bottom wall.
+goalLocation=new int[]{i,j,2};
+return goalLocation;
+}
+}
+
+i=0;j=0;
+for(i=0;i<height;i++){
+if(initialState[i][j]==-1){
+//goal state is on left wall.
+goalLocation=new int[]{i,j,3};
+return goalLocation;
+}
+}
+
+i=0;j=width-1;
+for(i=0;i<height;i++){
+if(initialState[i][j]==-1){
+//goal state is on right wall.
+goalLocation=new int[]{i,j,4};
+return goalLocation;
+}
+}
+return goalLocation;
+}
+
+int getMin(ArrayList<Node> nodes){
+int minIndex=0;
+Node tempNode = nodes.get(minIndex);
+int minCost = tempNode.getEstimatedCost();
+int tempCost=0;
+for(int index=1;index<nodes.size();index++){
+tempNode = nodes.get(index);
+tempCost=tempNode.getEstimatedCost();
+if(tempCost < minCost){
+minCost = tempCost;
+minIndex=index;
+}
+}
+return minIndex;
+}
+
+void printNode(Node node){
+printGameState(node.getState());
+ArrayList<String> moves=node.getMoves();
+System.out.println("d = "+ 
+node.getDepth() + "\ncost = "
+		+ node.getEstimatedCost());
+for(String move: moves)
+System.out.print(move);
+System.out.println();
+}
+
+Node getRootNode(int[] goalLocation){
+ArrayList<String> moves= new ArrayList<>();
+Brick masterBrick = getMasterBrick(initialState);
+int manhattanDistance = 
+getManhattanDistance(masterBrick,goalLocation);
+normalizeGameState(initialState);
+Node rootNode = new Node(initialState,
+		moves, width, height, 1);
+rootNode.setEstimatedCost(
+		(manhattanDistance+1));
+return rootNode;
+}
+
+double[] performAStar(String type){
+double[] result = {0.0,0.0};
+ArrayList<Node> openList= new ArrayList<>();
+ArrayList<Node> closedList= new ArrayList<>();;
+int[] goalLocation = getGoalLocation();
+Node rootNode=getRootNode(goalLocation);
+openList.add(rootNode);            
+int minIndex=0;
+Node node;
+do{            
+node = openList.get(minIndex);
+openList.remove(minIndex);
+closedList.add(node);
+
+if(isPuzzleSolved(node.getState())){
+result[0]=closedList.size();
+result[1]=node.getMoves().size();
+printOutput(node);
+break;
+}
+else{
+storeChildNodes(node, closedList,
+ goalLocation, openList, type);
+minIndex=getMin(openList);
+}                
+}while(true);
+
+return result;
+}
+
+boolean isPuzzleSolved(int[][] gameState){
+boolean isPuzzleSolved=true;
+for(int i=0;i<height;i++){
+for(int j=0;j<width;j++){
+if(gameState[i][j]==-1){
+isPuzzleSolved=false;
+}
+}
+}
+return isPuzzleSolved;
+}
+
+void printOutput(Node node){
+ArrayList<String> moves=node.getMoves();
+for(String move: moves){
+System.out.println(move);
+}
+printGameState(node.getState());
+}
+
+public void storeChildNodes(Node node,
+ ArrayList<Node> closedList,
+ int[] goalLocation, 
+ ArrayList<Node> openList, String type){
+int[][] gameState = node.getState();
+Set<Brick> brickStructure
+ = creatBrickStructure(gameState);
+Map<Brick, ArrayList<Integer>> movableBricks
+ = getMovableBricks(brickStructure, gameState);
+getNodesFromMovableBricks(node,
+ movableBricks, closedList,
+ goalLocation, openList, type);
+}
+
+public Map<Brick, ArrayList<Integer>> 
+getMovableBricks(Set<Brick> brickStructure,
+ int[][] gameState){
+Map<Brick, ArrayList<Integer>> movableBricks
+= new HashMap<>();
+ArrayList<Integer> moves = null;
+for(Brick brick: brickStructure){
+moves = brick.isMovable(gameState,
+		width, height);
+if(moves.size()>0){
+movableBricks.put(brick, moves);
+}
+}
+return movableBricks;
+}
+
+void getNodesFromMovableBricks(Node parentNode, 
+Map<Brick, ArrayList<Integer>> movableBricks,
+ ArrayList<Node> closedList, int[] goalLocation,
+ ArrayList<Node> openList, String type){
+int[][] gameState = parentNode.getState();
+ArrayList<String> movesCopy=null;
+ArrayList<String> parentMoves=parentNode.getMoves();
+int depth = parentNode.getDepth();
+ArrayList<Integer> moves=new ArrayList<>();
+Brick tempBrick = null;
+Brick masterBrick = null;
+Node newNode = null;
+int manhattanDistance=0;
+int euclideanDistance=0;
+boolean isAlreadyVisited=false;
+Set<Brick> bricks = movableBricks.keySet();
+for(Brick brick: bricks){
+moves = movableBricks.get(brick);
+
+for(int index=0; index<moves.size();index++){
+tempBrick=new Brick(brick.getBrickNumber(),
+ brick.getStartIndex(), brick.getEndIndex());
+int action = moves.get(index);
+int[][] newState = 
+generateMove(tempBrick, gameState, action);
+normalizeGameState(newState);
+movesCopy = new ArrayList<>(parentMoves);
+movesCopy.add("("+
+(tempBrick.getBrickNumber())
++","+getMoveName(action)+")");
+newNode = new Node(newState,
+ movesCopy, width,height,(depth+1));
+isAlreadyVisited = 
+newNode.isAlreadyPresent(closedList, openList);
+if(!isAlreadyVisited){
+masterBrick = getMasterBrick(newState);
+if(type=="Manhattan"){
+manhattanDistance = 
+getManhattanDistance(masterBrick, goalLocation);
+newNode.setEstimatedCost(
+		(newNode.getDepth()+manhattanDistance));
+}else {
+euclideanDistance = 
+getEuclideanDistance(masterBrick, goalLocation);
+newNode.setEstimatedCost(
+		(newNode.getDepth()+euclideanDistance));
+}
+
+openList.add(newNode);
+}
+}
+}
+}
+
+void printFinalResult(double[]
+ result, String fileName, String
+ heuristic){
+System.out.println(
+(int)result[1] + " steps\n");
+System.out.println(
+"Heuristic function used:\t" 
++ heuristic + "\n\n");
+}
+
+public void runAStar(){
+double[] result = 
+performAStar("Manhattan");   
+//Part A: Manhattan Distance as a heuristic.
+printFinalResult(result, "", 
+"Manhattan Distance");
+
+result = performAStar("Euclidean");                 
+ //Part B: Euclidean Distance as a heuristic.
+printFinalResult(result, "", 
+"Euclidean Distance");
+}
+}
+
+
+								</code></pre>
+							</div>
+
+							<div data-role="collapsible" data-content-theme="a" data-collapsed-icon="plus" data-expanded-icon="minus">
+								<h2>Brick.java</h2>
+								<pre class="prettyprint"><code class="language-java">
+
+import java.util.ArrayList;
+
+public class Brick {
+private int brickNumber = 0;
+private int[] startIndex= null;
+private int[] endIndex	= null;
+private int area 		= 0;
+private boolean masterBrick = false;
+
+Brick(){}
+
+public Brick(int brickNumber,
+ int[] startIndex, int[] endIndex)
+{
+this.brickNumber=brickNumber;
+this.startIndex = new int[2];
+this.endIndex = new int[2];
+
+this.startIndex[0]=startIndex[0];
+this.startIndex[1]=startIndex[1];
+this.endIndex[0]=endIndex[0];
+this.endIndex[1]=endIndex[1];
+area=((this.endIndex[1]-this.startIndex[1])+1)
+*((this.endIndex[0]-this.startIndex[0])+1);
+if(brickNumber==2)
+masterBrick=true;
+else
+masterBrick=false;
+}
+
+public int getBrickNumber(){
+return brickNumber;
+}
+
+void setBrickNumber(int brickNumber){
+this.brickNumber=brickNumber;
+}
+
+public int[] getStartIndex(){
+return startIndex;
+}
+
+public int[] getEndIndex(){
+return endIndex;
+}
+
+public void setStartIndex(int[] startIndex){
+this.startIndex[0]=startIndex[0];
+this.startIndex[1]=startIndex[1];
+}
+
+public void setEndIndex(int[] endIndex){
+this.endIndex[0]=endIndex[0];
+this.endIndex[1]=endIndex[1];
+}
+
+public int getArea(){
+return area;
+}
+
+void setArea(int area){
+this.area=area;
+}
+
+public boolean isMasterBrick(){
+return brickNumber==2;
+}
+
+void setMasterBrick(boolean masterBrick){
+this.masterBrick=masterBrick;
+}
+
+void isMasterBrickMovableToGoalState(
+ArrayList<Integer> possibleMoves, int[][]
+ gameState, int[] upperBase, int[] lowerBase,
+ int[] leftBase, int[] rightbase,
+ int upperIndex, int bottomIndex,
+ int leftIndex, int rightIndex,
+ int width, int height){
+int i=0;
+if(upperIndex==0){
+for(i=upperBase[1];i<=upperBase[3];i++){
+if(gameState[upperIndex][i]!=-1){
+break;
+}
+}
+if(i>upperBase[3]){
+possibleMoves.add(1);
+}
+}
+
+if(bottomIndex==height-1){
+for(i=lowerBase[1];i<=lowerBase[3];i++){
+if(gameState[bottomIndex][i]!=-1){
+break;
+}
+}
+if(i>lowerBase[3]){
+possibleMoves.add(2);
+}
+}
+
+if(leftIndex==0){
+for(i=leftBase[0];i<=leftBase[2];i++){
+if(gameState[i][leftIndex]!=-1){
+break;
+}
+}
+if(i>leftBase[2]){
+possibleMoves.add(3);
+}
+}
+
+if(rightIndex==width-1){
+for(i=rightbase[0];i<=rightbase[2];i++){
+if(gameState[i][rightIndex]!=-1){
+break;
+}
+}
+if(i>rightbase[2]){
+possibleMoves.add(4);
+}
+}
+
+}
+
+public ArrayList<Integer> 
+isMovable(int[][] gameState,
+ int width, int height){
+int[] upperBase={startIndex[0],
+startIndex[1],startIndex[0],endIndex[1]};
+int[] leftBase={startIndex[0],
+startIndex[1],endIndex[0],startIndex[1]};
+int[] lowerBase={endIndex[0],
+startIndex[1],endIndex[0],endIndex[1]};
+int[] rightbase={startIndex[0],
+endIndex[1],endIndex[0],endIndex[1]};
+
+int upperIndex=upperBase[0]-1;
+int leftIndex=leftBase[1]-1;
+int bottomIndex=lowerBase[0]+1;
+int rightIndex=rightbase[1]+1;
+int i=0;
+
+ArrayList<Integer> possibleMoves=
+new ArrayList<>();
+if(isMasterBrick()){
+isMasterBrickMovableToGoalState(possibleMoves,
+ gameState, upperBase, lowerBase,
+ leftBase, rightbase, upperIndex,
+ bottomIndex, leftIndex, rightIndex,
+ width, height);
+}
+if(upperIndex>0){
+for(i=upperBase[1];i<=upperBase[3];i++){
+if(gameState[upperIndex][i]!=0){
+break;
+}
+}
+if(i>upperBase[3]){
+possibleMoves.add(1);
+}
+}
+
+if(bottomIndex<height-1){
+for(i=lowerBase[1];i<=lowerBase[3];i++){
+if(gameState[bottomIndex][i]!=0){
+break;
+}
+}
+if(i>lowerBase[3]){
+possibleMoves.add(2);
+}
+}
+
+if(leftIndex>0){
+for(i=leftBase[0];i<=leftBase[2];i++){
+if(gameState[i][leftIndex]!=0){
+break;
+}
+}
+if(i>leftBase[2]){
+possibleMoves.add(3);
+}
+}
+
+if(rightIndex<width-1){
+for(i=rightbase[0];i<=rightbase[2];i++){
+if(gameState[i][rightIndex]!=0){
+break;
+}
+}
+if(i>rightbase[2]){
+possibleMoves.add(4);
+}
+}
+
+return possibleMoves;
+}
+
+public int equals(Brick brick){
+int result = 0;
+if(this.brickNumber == brick.brickNumber){
+result = 0;
+}
+else if(this.brickNumber < brick.brickNumber){
+result = -1;
+}
+else{
+result = 1;
+}
+return result;
+}
+
+public String tostring(){
+return "\nIndex = "+String.valueOf(brickNumber)
++" Area = "+String.valueOf(area)+
+" indices = "+String.valueOf(startIndex[0])
++" "+String.valueOf(startIndex[1])+" "
++String.valueOf(endIndex[0])+" "
++String.valueOf(endIndex[1]);
+}
+
+public static void main(
+String[] args) {
+/*int[][] initialState =
+ {{1,1,1,1,1},
+{1,3,2,2,1},
+{1,0,4,5,1},
+{-1,0,6,7,1},
+{1,1,1,1,1}};*/
+
+/*int[][] initialState =
+ {{1,-1,-1,1,1},
+{1,0,3,4,1},
+{1,0,2,2,1},
+{1,1,1,1,1}};*/
+
+/*int[][] initialState =
+ {{1,1,1,1,1,1},
+{1,0,3,2,2,1},
+{1,0,3,4,5,1},
+{-1,6,6,7,8,1},
+{1,1,1,1,1,1}};*/
+
+/*int[][] initialState =
+ {{1,1,1,1,1,1},
+{1,3,4,2,2,1},
+{1,5,4,2,2,1},
+{-1,0,6,7,7,1},
+{-1,8,0,9,10,1},
+{1,1,1,1,1,1}};*/
+
+int[][] initialState =
+ {{1,1,1,1,1,1},
+{1,3,2,2,4,1},
+{1,5,2,2,6,1},
+{1,7,8,9,10,1},
+{1,11,12,13,14,1},
+{1,15,0,0,16,1},
+{1,1,-1,-1,1,1}};
+AStarAlgorithm obj = new
+ AStarAlgorithm(initialState);
+obj.runAStar();
+}
+}
+
+								</code></pre>
+							</div>
+
+							<div data-role="collapsible" data-content-theme="a" data-collapsed-icon="plus" data-expanded-icon="minus">
+								<h2>Node.java</h2>
+								<pre class="prettyprint"><code class="language-java">
+import java.util.ArrayList;
+
+public class Node {
+
+private int[][] state	= null;
+private ArrayList<String>
+ moves = null;
+private int width = 0;
+private int height	= 0;
+private int depth = 0;
+private int estimatedCost = 0;
+
+Node(){}
+
+public Node(int[][] state, 
+ArrayList<String>  moves, 
+int width, int height, 
+int depth){
+this.state = state;
+this.moves = moves;
+this.width = width;
+this.height = height;
+this.depth = depth;
+this.estimatedCost = 0;
+}
+
+public ArrayList<String>
+ getMoves(){
+return moves;
+}
+
+public void setMoves(ArrayList<String>
+ moves) {
+this.moves = moves;
+}
+
+public int[][] getState(){
+return state;
+}
+
+public void setState(int[][] state) {
+this.state = state;
+}
+
+public boolean isEqual(Node node){
+int[][] checkState=node.getState();
+for(int row=0;row<height;row++){
+for(int col=0;col<width;col++){
+if(state[row][col]!=checkState[row][col]){
+return false;
+}
+}
+}
+return true;
+}
+
+int getHeight(){
+return height;
+}
+
+void setHeight(int height) {
+this.height = height;
+}
+
+int getWidth(){
+return width;
+}
+
+void setWidth(int width) {
+this.width = width;
+}
+
+public boolean isAlreadyPresent
+(ArrayList<Node> closedList, 
+ArrayList<Node> openList){
+boolean isPresentInClosedList=false,
+ isPresentInOpenList=false;
+int index=0;
+Node node;
+for(index=0;index<closedList.size();
+index++){
+node = closedList.get(index);
+if(isEqual(node)){
+isPresentInClosedList=true;
+break;
+}
+}
+
+if(!isPresentInClosedList){
+for(index=0;index<openList.size();
+index++){
+node = openList.get(index);
+if(isEqual(node)){
+	isPresentInOpenList=true;
+	break;
+}
+}
+}
+
+return isPresentInClosedList ||
+ isPresentInOpenList;
+}
+
+public void swapIndex(int[][] 
+gameState, int index1, int index2){
+int i=0,j=0;
+for(i = 0;i < height;i++) {
+for(j = 0;j < width;j++) {
+if (gameState[i][j]==index1) {
+gameState[i][j]=index2;
+} else if (gameState[i][j]==index2) {
+gameState[i][j]=index1;
+}
+}
+}
+}
+
+public void normalizeGameState(int[][]
+ gameState){
+int nextIdx = 3,i=0,j=0;
+for(i = 0;i < height;i++) {
+for(j = 0;j < width;j++) {
+if (gameState[i][j]==nextIdx) {
+nextIdx++;
+} else if (gameState[i][j]
+ > nextIdx) {
+swapIndex(gameState, 
+nextIdx,gameState[i][j]);
+nextIdx++;
+}
+}
+}
+}
+
+public int getEstimatedCost(){
+return estimatedCost;
+}
+
+public void setEstimatedCost(
+int estimatedCost) {
+this.estimatedCost = estimatedCost;
+}
+
+public int getDepth(){
+return depth;
+}
+
+public void setDepth(int depth) {
+this.depth = depth;
+}
+
+@Override
+public int hashCode() {
+final int prime = 31;
+int result = 1;
+result = 
+prime * result + estimatedCost;
+return result;
+}
+
+public int equals(Node node) {
+int result = 0;
+if(this.estimatedCost
+ == node.estimatedCost){
+result = 0;
+}
+else if(this.estimatedCost
+ < node.estimatedCost){
+result = -1;
+}
+else{
+result = 1;
+}
+return result;
+}    
+}					
+								</code></pre>
+							</div>
+						</div>
+					</div>
+                    <div data-role="collapsible" data-theme="b" data-content-theme="b" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                        <h2 class="wrap">2. Solve Sliding Brick Puzzle</h2>
+                        <ul data-role="listview" data-inset="true" data-filter="true">
+                            <li data-icon="grid">
+                                <a href="#2X3" data-transition="pop" data-rel="popup" data-position-to="window">
+                                    <img src="icons/2X3.png" style="margin-bottom: 1px;" class="ui-shadow">
+                                        <h2 class="wrap">2 X 3 Sliding Brick Puzzle</h2>
+                                        <p>Master Brick: 1 X 2</p>
+                                        </a>
+                            </li>
+                            <li data-icon="grid">
+                                <a href="#3X3" data-transition="pop" data-rel="popup" data-position-to="window">
+                                    <img src="icons/3X3.png" style="margin-bottom: 1px;" class="ui-shadow">
+                                        <h2 class="wrap">3 X 3 Sliding Brick Puzzle</h2>
+                                        <p>Master Brick: 1 X 2</p>
+                                        </a>
+                            </li>
+                            <li data-icon="grid">
+                                <a href="#3X4" data-transition="pop" data-rel="popup" data-position-to="window">
+                                    <img src="icons/3X4.png" style="margin-bottom: 1px;" class="ui-shadow">
+                                        <h2 class="wrap">3 X 4 Sliding Brick Puzzle</h2>
+                                        <p>Master Brick: 1 X 2</p>
+                                        </a>
+                            </li>
+                            <li data-icon="grid">
+                                <a href="#4X4" data-transition="pop" data-rel="popup" data-position-to="window">
+                                    <img src="icons/4X4.png" style="margin-bottom: 1px;" class="ui-shadow">
+                                        <h2 class="wrap">4 X 4 Sliding Brick Puzzle</h2>
+                                        <p>Master Brick: 2 X 2</p>
+                                        </a>
+                            </li>
+                            <li data-icon="grid">
+                                <a href="#5X4" data-transition="pop" data-rel="popup" data-position-to="window">
+                                    <img src="icons/5X4.png" style="margin-bottom: 1px;" class="ui-shadow">
+                                        <h2 class="wrap">5 X 4 Sliding Brick Puzzle</h2>
+                                        <p>Master Brick: 2 X 2</p>
+                                        </a>
+                            </li>
+                        </ul>
+                    </div>
+				 </div>
+				 <div style="text-align: center; margin-bottom: 100px">
+				 	<a href="#learnAlgorithm" class="ui-btn ui-corner-all ui-btn-b ui-icon-arrow-l ui-btn-icon-left ui-shadow-icon ui-btn-inline" 	data-theme="b">Back To Learn A-Star</a>
+					<a href="#quizHome" class="ui-btn ui-corner-all ui-btn-b ui-icon-arrow-r ui-btn-icon-right ui-shadow-icon ui-btn-inline" data-theme="b">Proceed To Assessment Quiz</a>
+				</div>
+				
+			</div><!-- /content -->
+
+			<div data-role="popup" id="2X3" class="ui-content popupImg" data-theme="a" data-overlay-theme="a" data-corners="true" data-tolerance="30,15,30,15">
+				<a href="#" data-rel="back" class="ui-shadow-icon ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-b ui-btn-icon-notext ui-btn-left">Close</a>
+				<div data-role="header" data-theme="b">
+					<h3>Solution</h3>
+				</div>
+				<div data-role="content">
+					<img src="images/2X3.png" class="ui-shadow">
+					<h3>Steps:</h3>
+					<p>(2,left)</br>(4,down)</br>(3,right)</br>(2,up)</br>(2,up)</p>
+					<h3>Total Number of Steps: 5</h3>
+					<a href="#" data-rel="back" class="ui-shadow-icon ui-btn ui-corner-all ui-shadow ui-icon-delete ui-btn-b ui-btn-icon-left">Close</a>
+				</div>
+			</div>
+
+			<div data-role="popup" id="3X3" class="ui-content popupImg" data-theme="a" data-overlay-theme="a" data-corners="true" data-tolerance="30,15,30,15">
+				<a href="#" data-rel="back" class="ui-shadow-icon ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-b ui-btn-icon-notext ui-btn-left">Close</a>
+				<div data-role="header" data-theme="b">
+					<h3>Solution</h3>
+				</div>
+				<div data-role="content">
+					<img src="images/3X3.png" class="ui-shadow">
+					<h3>Steps:</h3>
+					<p>(4,left)</br>(6,left)</br>(7,left)</br>(5,down)</br>(2,down)</br>(3,right)</br>(4,up)</br>(2,left)</br>(7,up)</br>(7,right)</br>(6,right)</br>(5,up)</br>(7,up)</br>(7,right)</br>(2,down)</br>(2,left)</p>
+					<h3>Total Number of Steps: 16</h3>
+					<a href="#" data-rel="back" class="ui-shadow-icon ui-btn ui-corner-all ui-shadow ui-icon-delete ui-btn-b ui-btn-icon-left">Close</a>
+				</div>
+			</div>
+
+			<div data-role="popup" id="3X4" class="ui-content popupImg" data-theme="a" data-overlay-theme="a" data-corners="true" data-tolerance="30,15,30,15">
+				<a href="#" data-rel="back" class="ui-shadow-icon ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-b ui-btn-icon-notext ui-btn-left">Close</a>
+				<div data-role="header" data-theme="b">
+					<h3>Solution</h3>
+				</div>
+				<div data-role="content">
+					<img src="images/3X4.png" class="ui-shadow">
+					<h3>Steps:</h3>
+					<p>(3,left)</br>(2,left)</br>(4,left)</br>(7,up)</br>(7,right)</br>(6,up)</br>(8,up)</br>(8,right)</br>(5,down)</br>(5,left)</br>(7,left)</br>(5,down)</br>(2,down)</br>(4,left)</br>(5,up)</br>(2,right)</br>(3,right)</br>(6,up)</br>(7,left)</br>(8,left)</br>(6,up)</br>(7,up)</br>(8,left)</br>(2,down)</br>(5,down)</br>(7,right)</br>(4,right)</br>(6,right)</br>(6,up)</br>(8,up)</br>(2,left)</br>(2,left)</br>(2,left)</p>
+					<h3>Total Number of Steps: 33</h3>
+					<a href="#" data-rel="back" class="ui-shadow-icon ui-btn ui-corner-all ui-shadow ui-icon-delete ui-btn-b ui-btn-icon-left">Close</a>
+				</div>
+			</div>
+
+			<div data-role="popup" id="4X4" class="ui-content popupImg" data-theme="a" data-overlay-theme="a" data-corners="true" data-tolerance="30,15,30,15">
+				<a href="#" data-rel="back" class="ui-shadow-icon ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-b ui-btn-icon-notext ui-btn-left">Close</a>
+				<div data-role="header" data-theme="b">
+					<h3>Solution</h3>
+				</div>
+				<div data-role="content">
+					<img src="images/4X4.png" class="ui-shadow">
+					<h3>Steps:</h3>
+					<p>(6,down)</br>(4,down)</br>(3,right)</br>(4,up)</br>(5,left)</br>(6,left)</br>(10,up)</br>(10,right)</br>(4,down)</br>(9,right)</br>(8,right)</br>(4,down)</br>(4,left)</br>(2,left)</br>(7,up)</br>(5,up)</br>(10,up)</br>(8,up)</br>(8,right)</br>(10,right)</br>(9,right)</br>(7,right)</br>(5,down)</br>(6,down)</br>(3,down)</br>(4,down)</br>(2,left)</br>(3,left)</br>(4,up)</br>(7,up)</br>(9,up)</br>(8,right)</br>(7,right)</br>(6,right)</br>(6,down)</br>(2,down)</br>(3,left)</br>(3,left)</br>(4,left)</br>(4,left)</br>(5,up)</br>(7,up)</br>(10,up)</br>(7,up)</br>(10,right)</br>(10,right)</br>(9,right)</br>(9,right)</br>(2,down)</br>(2,left)</p>
+					<h3>Total Number of Steps: 50</h3>
+					<a href="#" data-rel="back" class="ui-shadow-icon ui-btn ui-corner-all ui-shadow ui-icon-delete ui-btn-b ui-btn-icon-left">Close</a>
+				</div>
+			</div>
+
+			<div data-role="popup" id="5X4" class="ui-content popupImg" data-theme="a" data-overlay-theme="a" data-corners="true" data-tolerance="30,15,30,15">
+				<a href="#" data-rel="back" class="ui-shadow-icon ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-b ui-btn-icon-notext ui-btn-left">Close</a>
+				<div data-role="header" data-theme="b">
+					<h3>Solution</h3>
+				</div>
+				<div data-role="content">
+					<img src="images/5X4.png" class="ui-shadow">
+					<h3>Steps:</h3>
+					<p>(12,down)</br>(8,down)</br>(12,down)</br>(8,down)</br>(2,down)</br>(4,left)</br>(3,right)</br>(5,up)</br>(7,up)</br>(9,up)</br>(10,left)</br>(7,up)</br>(9,up)</br>(12,up)</br>(12,right)</br>(2,down)</br>(8,left)</br>(10,up)</br>(7,right)</br>(10,up)</br>(12,up)</br>(12,up)</br>(13,up)</br>(16,up)</br>(15,left)</br>(16,right)</br>(2,down)</br>(2,down)</br></p>
+					<h3>Total Number of Steps: 28</h3>
+					<a href="#" data-rel="back" class="ui-shadow-icon ui-btn ui-corner-all ui-shadow ui-icon-delete ui-btn-b ui-btn-icon-left">Close</a>
+				</div>
+			</div>
+			<div data-role="footer" data-theme="b" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li> <a href="#home" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-home ui-btn-b ui-shadow">Home</a></li>
+						<li> <a href="#learnAlgorithm" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-info ui-btn-b ui-shadow">Learn</a></li>
+						<li> <a href="#executeAlgorithm" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-star ui-btn-b ui-shadow">Implement</a></li>
+						<li> <a href="#quizHome" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-check ui-btn-b ui-shadow">Assess</a></li>
+					</ul>
+				</div>
+
+				<h4 class="wrap">
+					Developed By: Ajinkya Dhage, Student ID: 14178051
+				</h4>
+			</div><!-- /Footer -->
+		</div><!-- /page -->
+
+		<!-- Start of Quiz page -->
+		<div data-role="page" id="quizHome"> 
+			<div data-role="header" data-theme="b">
+				<h1>AlgoTutor</h1>
+				<div>
+					<a class="ui-shadow-icon ui-btn ui-btn-left ui-corner-all ui-btn-icon-center ui-icon-arrow-l ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" data-rel= "back"></a>
+					<a class="ui-shadow-icon ui-btn ui-btn-right ui-corner-all ui-btn-icon-center ui-icon-bars ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" href="#panelArea4"></a>
+				</div>
+				<div data-role="panel" id="panelArea4" data-theme="a" data-display="overlay" data-position="right"> 
+					<a href="#home" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-home ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Home</a></br>
+					<a href="#algorithms" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-bullets ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Main Menu</a></br>
+					<a href="#learnAlgorithm" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Learn A-Star</a></br>
+					<a href="#executeAlgorithm" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-star ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Implement and Execute A-Star</a></br>
+					<a href="#quizHome" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-check ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Take Quiz</a>
+					<a href="#help" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-user ui-btn-icon-left ui-btn-b ui-shadow" data-theme="b">Help</a>
+				</div>
+				
+				<div class="common-banner">
+					<div class="inner">
+						<div class="banner-data">
+							<h1>Take Assessment Quiz</h1>
+							<h2></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="content">
+				<h2>Quiz Instructions</h2>
+				<p>Assessment Quiz contains 10 questions based on A-star Algorithm and Problem Solving By Searching. You have to answer all questions correctly to pass this test. Click on Start Quiz to begin the assessment.	</p>
+				<div style="text-align: center; margin-bottom: 100px;">
+				<a href="#executeAlgorithm" class="ui-btn ui-corner-all ui-btn-b ui-icon-arrow-l ui-btn-icon-left ui-shadow-icon ui-btn-inline" data-theme="b">Back To Execute A-Star</a>
+         		<a href="#quiz" class="ui-shadow-icon ui-btn ui-btn-b ui-corner-all ui-btn-icon-right ui-icon-arrow-r ui-btn-inline" id="startQuiz"  data-theme="b">Start Quiz</a>
+         		</div>
+			</div><!-- /content -->
+			<div data-role="footer" data-theme="b" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li> <a href="#home" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-home ui-btn-b ui-shadow">Home</a></li>
+						<li> <a href="#learnAlgorithm" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-info ui-btn-b ui-shadow">Learn</a></li>
+						<li> <a href="#executeAlgorithm" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-star ui-btn-b ui-shadow">Implement</a></li>
+						<li> <a href="#quizHome" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-check ui-btn-b ui-shadow">Assess</a></li>
+					</ul>
+				</div>
+
+				<h4 class="wrap">
+					Developed By: Ajinkya Dhage, Student ID: 14178051
+				</h4>
+			</div><!-- /Footer -->
+		</div><!-- /page -->
+
+		<!-- Start of Quiz page -->
+		<div data-role="page" id="quiz"> 
+			<div data-role="header" data-theme="b">
+				<h1>AlgoTutor</h1>
+				<div>
+					<a class="ui-shadow-icon ui-btn ui-btn-left ui-corner-all ui-btn-icon-center ui-icon-arrow-l ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" href="#quitAssessment" data-transition="pop"  data-rel= "popup" data-position-to="window"></a>
+					<a class="ui-shadow-icon ui-btn ui-btn-right ui-corner-all ui-btn-icon-center ui-icon-bars ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" href="#panelArea5"></a>
+				</div>
+				<div data-role="panel" id="panelArea5" data-theme="a" data-display="overlay" data-position="right"> 
+					<a href="#home" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-home ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Home</a></br>
+					<a href="#algorithms" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-bullets ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Main Menu</a></br>
+					<a href="#learnAlgorithm" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Learn A-Star</a></br>
+					<a href="#executeAlgorithm" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-star ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Implement and Execute A-Star</a></br>
+					<a href="#quizHome" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-check ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Take Quiz</a>
+					<a href="#help" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-user ui-btn-icon-left ui-btn-b ui-shadow" data-theme="b">Help</a>
+				</div>
+				
+				<div class="common-banner">
+					<div class="inner">
+						<div class="banner-data">
+							<h1>Assessment Quiz</h1>
+							<h2>Select an appropriate option and click Next</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div data-role="content">        			
+        			<p class="errorMessage" id="errorPopupPosition" style="color: red; visibility: hidden;">Error Message</p>
+        			
+        			<div data-role="popup" id="errorPopup" class="ui-content" style="max-width:280px" data-dismissible="false">
+   						<a href="#" data-rel="back" class="ui-shadow-icon ui-btn ui-corner-all ui-shadow ui-btn-b ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
+						<p style="color: red">Please select an option</p>
+					</div>
+        			<ul data-role="listview" class="optionList1" data-inset="true" data-divider-theme="b" style="margin-left: 50px; margin-right: 50px; margin-top: 30px">
+        				<li data-role="list-divider" class="question wrap"></li>
+        				<fieldset class="optionList" data-role="controlgroup">
+	        				<input name="radioOption" id="radioOption0" value="0" type="radio">
+        					<label for="radioOption0" class="radioLabel0"></label>
+        					<input name="radioOption" id="radioOption1" value="1" type="radio">
+        					<label for="radioOption1" class="radioLabel1"></label>
+        					<input name="radioOption" id="radioOption2" value="2" type="radio">
+        					<label for="radioOption2" class="radioLabel2"></label>
+        					<input name="radioOption" id="radioOption3" value="3" type="radio">
+        					<label for="radioOption3" class="radioLabel3"></label>
+        				</fieldset>
+        			</ul>
+        			
+        			<div style="margin-left: 50px; margin-bottom: 100px;" class="nextButton ui-btn ui-btn-b ui-btn-icon-right ui-icon-carat-r ui-btn-inline ui-corner-all" data-theme="b">Next</div>
+			</div><!-- /content -->
+            <div data-role="popup" id="quitAssessment" class="ui-content" data-theme="a" data-overlay-theme="a" data-corners="true">
+                <p style="text-align:center; margin-bottom: 50px">Are you sure you want to quit the assessment quiz?</p>
+                <a id="quitQuiz" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-check ui-btn-b ui-shadow"  data-theme="b">Yes</a>
+                <a class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-b ui-btn-icon-left ui-icon-delete ui-shadow" data-rel="back"  data-theme="b">No</a>
+            </div>
+			<div data-role="footer" data-theme="b" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li> <a href="#home" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-home ui-btn-b ui-shadow">Home</a></li>
+						<li> <a href="#learnAlgorithm" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-info ui-btn-b ui-shadow">Learn</a></li>
+						<li> <a href="#executeAlgorithm" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-star ui-btn-b ui-shadow">Implement</a></li>
+						<li> <a href="#quizHome" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-check ui-btn-b ui-shadow">Assess</a></li>
+					</ul>
+				</div>
+
+				<h4 class="wrap">
+					Developed By: Ajinkya Dhage, Student ID: 14178051
+				</h4>
+			</div><!-- /Footer -->
+		</div><!-- /page -->
+
+		<!-- Start of Quiz Result page -->
+		<div data-role="page" data-theme="a" id="quizResult">
+			<div data-role="header" data-theme="b">
+				<h1>AlgoTutor</h1>
+				<div>
+					<a class="ui-shadow-icon ui-btn ui-btn-left ui-corner-all ui-btn-icon-center ui-icon-arrow-l ui-btn-b ui-shadow ui-btn-icon-notext" href="#noBack" data-transition="pop" data-rel="popup" data-position-to="window">
+                    </a>
+					<a class="ui-shadow-icon ui-btn ui-btn-right ui-corner-all ui-btn-icon-center ui-icon-bars ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" href="#panelArea6"></a>
+				</div>
+				<div data-role="panel" id="panelArea6" data-theme="a" data-display="overlay" data-position="right"> 
+					<a href="#home" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-home ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Home</a></br>
+					<a href="#algorithms" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-bullets ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Main Menu</a></br>
+					<a href="#learnAlgorithm" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Learn A-Star</a></br>
+					<a href="#executeAlgorithm" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-star ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Implement and Execute A-Star</a></br>
+					<a href="#quizHome" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-check ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Take Quiz</a>
+					<a href="#help" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-user ui-btn-icon-left ui-btn-b ui-shadow" data-theme="b">Help</a>
+				</div>
+				
+				<div class="common-banner">
+					<div class="inner">
+						<div class="banner-data">
+							<h1>Quiz Result</h1>
+							<h2></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="content" style="text-align: center; margin-bottom: 100px">
+				<p class="score b-text"></p>
+				<h2 class="resultStatus"></h2>
+                <div data-role="collapsible" data-theme="b" data-content-theme="a" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                    <h2 class="wrap" style="text-align: center;">Answers and Description</h2>
+                    <ul data-role="listview" data-inset="true">
+                        <li data-icon="check">
+                            <a href="#">
+                                <h2 class="wrap" id="q0"></h2>
+                                <h3 class="wrap" id="q0-ans"></h3>
+                                <p class="wrap" id="q0-des"></p>
+                            </a>
+                        </li>
+                        
+                        <li data-icon="check">
+                            <a href="#">
+                                <h2 class="wrap" id="q1"></h2>
+                                <h3 class="wrap" id="q1-ans"></h3>
+                                <p class="wrap" id="q1-des"></p>
+                            </a>
+                        </li>
+                        <li data-icon="check">
+                            <a href="#">
+                                <h2 class="wrap" id="q2"></h2>
+                                <h3 class="wrap" id="q2-ans"></h3>
+                                <p class="wrap" id="q2-des"></p>
+                            </a>
+                        </li>
+                        
+                        <li data-icon="check">
+                            <a href="#">
+                                <h2 class="wrap" id="q3"></h2>
+                                <h3 class="wrap" id="q3-ans"></h3>
+                                <p class="wrap" id="q3-des"></p>
+                            </a>
+                        </li>
+                        <li data-icon="check">
+                            <a href="#">
+                                <h2 class="wrap" id="q4"></h2>
+                                <h3 class="wrap" id="q4-ans"></h3>
+                                <p class="wrap" id="q4-des"></p>
+                            </a>
+                        </li>
+                        
+                        <li data-icon="check">
+                            <a href="#">
+                                <h2 class="wrap" id="q5"></h2>
+                                <h3 class="wrap" id="q5-ans"></h3>
+                                <p class="wrap" id="q5-des"></p>
+                            </a>
+                        </li>
+                        <li data-icon="check">
+                            <a href="#">
+                                <h2 class="wrap" id="q6"></h2>
+                                <h3 class="wrap" id="q6-ans"></h3>
+                                <p class="wrap" id="q6-des"></p>
+                            </a>
+                        </li>
+                        
+                        <li data-icon="check">
+                            <a href="#">
+                                <h2 class="wrap" id="q7"></h2>
+                                <h3 class="wrap" id="q7-ans"></h3>
+                                <p class="wrap" id="q7-des"></p>
+                            </a>
+                        </li>
+                        <li data-icon="check">
+                            <a href="#">
+                                <h2 class="wrap" id="q8"></h2>
+                                <h3 class="wrap" id="q8-ans"></h3>
+                                <p class="wrap" id="q8-des"></p>
+                            </a>
+                        </li>
+                        
+                        <li data-icon="check">
+                            <a href="#">
+                                <h2 class="wrap" id="q9"></h2>
+                                <h3 class="wrap" id="q9-ans"></h3>
+                                <p class="wrap" id="q9-des"></p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#quizHome" class="ui-btn ui-corner-all ui-btn-b ui-icon-check ui-btn-icon-right ui-shadow-icon ui-btn-inline" data-theme="b">Retake the quiz</a>
+				<a href="#algorithms" class="ui-btn ui-corner-all ui-btn-b ui-icon-delete ui-btn-icon-right ui-shadow-icon ui-btn-inline" data-theme="b">Quit</a>
+			</div><!-- /content -->
+            
+            <div data-role="popup" id="noBack" class="ui-content" data-theme="a" data-overlay-theme="a" data-corners="true">
+                <p style="text-align:center; margin-bottom: 50px">Are you sure you want leave the Result Page?</p>
+                <a href="#quizHome" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-check ui-btn-b ui-shadow"  data-theme="b">Yes</a>
+                <a class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-b ui-btn-icon-left ui-icon-delete ui-shadow" data-rel="back"  data-theme="b">No</a>
+            </div>
+			<div data-role="footer" data-theme="b" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li> <a href="#home" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-home ui-btn-b ui-shadow">Home</a></li>
+						<li> <a href="#learnAlgorithm" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-info ui-btn-b ui-shadow">Learn</a></li>
+						<li> <a href="#executeAlgorithm" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-star ui-btn-b ui-shadow">Implement</a></li>
+						<li> <a href="#quizHome" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-check ui-btn-b ui-shadow">Assess</a></li>
+					</ul>
+				</div>
+
+				<h4 class="wrap">
+					Developed By: Ajinkya Dhage, Student ID: 14178051
+				</h4>
+			</div><!-- /Footer -->
+		</div><!-- /page -->
+        
+        <!-- Start of Help page -->
+        <div data-role="page" data-theme="a" id="help">
+            <div data-role="header" data-theme="b">
+                <h1>AlgoTutor</h1>
+                <div>
+                    <a class="ui-shadow-icon ui-btn ui-btn-left ui-corner-all ui-btn-icon-center ui-icon-arrow-l ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" data-rel= "back"></a>
+                    <a class="ui-shadow-icon ui-btn ui-btn-right ui-corner-all ui-btn-icon-center ui-icon-bars ui-btn-b ui-shadow ui-btn-icon-notext" data-theme="b" href="#panelArea6"></a>
+                </div>
+                <div data-role="panel" id="panelArea6" data-theme="a" data-display="overlay" data-position="right">
+                    <a href="#home" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-home ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Home</a></br>
+                    <a href="#algorithms" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-bullets ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Main Menu</a></br>
+                    <a href="#learnAlgorithm" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-btn-icon-left ui-icon-info ui-btn-b ui-shadow"  data-theme="b">Learn A-Star</a></br>
+                    <a href="#executeAlgorithm" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-star ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Implement and Execute A-Star</a></br>
+                    <a href="#quizHome" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-check ui-btn-icon-left ui-btn-b ui-shadow"  data-theme="b">Take Quiz</a>
+                    <a href="#help" class="ui-shadow-icon panel-btn ui-btn ui-corner-all ui-btn-center ui-icon-user ui-btn-icon-left ui-btn-b ui-shadow" data-theme="b">Help</a>
+                </div>
+                
+                <div class="common-banner">
+                    <div class="inner">
+                        <div class="banner-data">
+                            <h1>Help</h1>
+                            <h2>Follow the given instructions to understand the working of AlgoTutor</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-role="content">
+                <h2>How to use AlgoTutor Application?</h2>
+                
+                <p class="b-text">Home Page:</p>
+                
+                <p>Once you open the application, you will be on the Home page. You can click on GET STARTED to being. You will be navigated to Main Menu page once you click on GET STARTED. To begin, you can also click on the menu icon, which is on the extreme right corner of the application header. Then click on Main Menu to proceed. </p>
+                
+                <p class="b-text">Main Menu: </p>
+                
+                <p>Learn Algorithm, Implement and Execute Algorithm, and Assessment Quiz are the three main features of the application. The application helps to understand A-Star Algorithm. To learn this algorithm in a better way, it is advisable that you begin with Lean section and then proceed to Execute and Implement Section. Finally, take the assessment quiz. Click on Learn A-Star Algorithm to begin the learning process. </p>
+                
+                <p class="b-text">Learn A-Star Algorithm: </p>
+                
+                <p>This section will help you to learn the A-Star algorithm and it assists the users to understand the basics of this algorithm. Go through the given topics sequentially by clicking on topic names, read the concepts and follow the given instructions. Once you understand all the concepts then click on Proceed To Implement and Execute A-Star. </p>
+                
+                <p class="b-text">Implement and Execute A-Star: </p>
+                
+                <p>This section provides the code used for implementing A-Star Algorithm to solve Sliding Brick Puzzle. Click on Implement A-Star to get this code. Read the description of the code to understand the functionality achieved by each code snippet. </p>
+                
+                <p>This section also provides the steps to solve the Sliding Brick Puzzle that are generated after executing the given code. Click on “Solve Sliding Brick Puzzle” and then click on each puzzle to get the steps to solve it. These steps will be generated by the code provided as explained above. </p>
+                
+                <p>Once you completely understand the A-Star Algorithm, you can click on Proceed To Assessment Quiz to take the quiz and to confirm the level of your understanding. </p>
+                
+                <p class="b-text">Take Assessment Quiz: </p>
+                
+                <p>Read the quiz instructions and click on Start Quiz, to begin with the quiz. Read each question and select appropriate answer option and then click Next to proceed to the next question. Once you answer all the questions you will receive the score and the result of the assessment quiz. You can click on the View Solution drop-down to get the solution and the description of correct answers. </p>
+                
+                <p class="b-text">Additional Navigation Options: </p>
+                
+                <p>Footer of the application has navigation buttons that will help you to navigate to the required page. You can also use the menu button present on the extreme right corner of the application header to navigate to the required page.</p>
+            </div><!-- /content -->
+            <div data-role="footer" data-theme="b" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li> <a href="#home" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-home ui-btn-b ui-shadow">Home</a></li>
+                        <li> <a href="#learnAlgorithm" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-info ui-btn-b ui-shadow">Learn</a></li>
+                        <li> <a href="#executeAlgorithm" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-star ui-btn-b ui-shadow">Implement</a></li>
+                        <li> <a href="#quizHome" class="ui-shadow-icon ui-btn ui-btn-icon-bottom ui-icon-check ui-btn-b ui-shadow">Assess</a></li>
+                    </ul>
+                </div>
+                
+                <h4 class="wrap">
+                    Developed By: Ajinkya Dhage, Student ID: 14178051
+                </h4>
+            </div><!-- /Footer -->
+        </div><!-- /page -->
+	</body>
+</html>

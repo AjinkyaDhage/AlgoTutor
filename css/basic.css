@@ -1,0 +1,106 @@
+.wrap {
+	white-space : normal !important;
+}
+
+.panel-btn{
+	width: 80%;
+}
+
+.header-banner {
+	margin: auto;
+	background: url(landing.jpg) no-repeat 50% 50%;
+	width: 100%;
+	/*height: 80%;*/	
+	top: 0;
+	display: table;
+	background-size: cover;
+}
+
+.header-banner .inner{
+	display: table-cell;
+	max-width: none;	
+}
+
+.inner .banner-data{
+	max-width: 500px;
+	margin: auto;
+	text-align: center;
+}
+
+.banner-data h1{
+	font-family: 'Century Gothic', sans-serif;
+	color: #f9f3f4;
+	font-size: 350%;
+	text-shadow: 0 0 300px #000;
+	margin-top: 30%;
+    margin-bottom: 0;
+}
+
+.banner-data h2{
+	font-family: 'Century Gothic', sans-serif;
+	color: #f9f3f4;
+	text-shadow: 0 0 300px #000;
+	margin-top: 0;
+    margin-bottom: 10%;
+}
+
+.banner-data .ui-btn{
+	margin-bottom: 44%;
+}
+
+.common-banner{
+	background: url(intelligence1.jpg) no-repeat 50% 50%;
+	margin: auto;
+	width: 100%;
+	top: 0;
+	display: table;
+	background-size: cover;
+	background-color: #160e08;
+}
+
+.common-banner .inner{
+	display: table-cell;
+	max-width: none;	
+}
+
+.common-banner .inner .banner-data{
+	max-width: 500px;
+	margin: auto;
+	text-align: center;
+} 
+
+.common-banner .inner .banner-data h1{
+	color: #f98a1d;
+	text-shadow: 0 0 300px #000;
+	margin-top: 20%;
+    margin-bottom: 0;
+}
+
+.algo-steps{
+	max-width: 500px;
+	max-height: 500px;
+}
+
+.algo-image{
+	max-width: 500px;
+	max-height: 500px;
+	width: 23%;
+	top: 0;
+}
+
+.algo-popup-img{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	max-width: 1000px;
+	max-height: 500px;
+}
+
+.algo-image-header h2{
+	text-align: center;
+}
+
+.b-text{
+	font-weight:bold;
+}
