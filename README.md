@@ -22,11 +22,11 @@ To make the learning process easy and interesting, the application is divided in
 #### Implement & Execute A-Star Algorithm:
 - Once students understand the concepts of the A-Star Algorithm, they can use Implement Section to develop the A-Star algorithm using Java.
 - Students can use the Java Code snippets provided in this section and develop their own code. As mentioned above, the AlgoTuor application helps to implement the A-Star Algorithm to solve Sliding Brick Puzzle.
-- The execute section provides the final output of the code that gives the steps to solve the Sliding Brick Puzzle of various dimensions as shown in the image above.
+- The execute section provides the final output of the code that gives the steps to solve the Sliding Brick Puzzle of various dimensions.
 
 #### Take Assessment Quiz:
 - Once students completely understand the theory and technicalities of the A-Star algorithm, they can take the assessment quiz to confirm the level of their understanding.
-- Assessment Quiz section covers some basic questions about the algorithm. After answering all the questions and submitting the test, this section provides the quiz score and the correct answers with a brief description as shown above.
+- Assessment Quiz section covers some basic questions about the algorithm. After answering all the questions and submitting the test, this section provides the quiz score and the correct answers with a brief description.
 
 ## Future Work:
 Currently, the AlgoTutor application helps users to understand only one algorithm. But, the same structure of the application can be extended to help users understand other algorithms in the field of Data Structures and AI. Also, the application does not store the learning progress for each user separately. This drawback can be overcome by creating login functionality and maintaining the user sessions. Even if the AlgoTutor application has these drawbacks, it successfully achieves its main goal of helping users to learn A-Star Algorithm of AI in an easy way.
