@@ -1,5 +1,5 @@
 # AlgoTutor
-An Easy Way To Learn Complex Algorithms
+###### An Easy Way To Learn Complex Algorithms
 
 ## Introduction
 AlgoTutor is a web application that helps users to learn algorithms in the field of Data Structures and Artificial Intelligence in an easy way. Generally, algorithms in these two fields are little complex and difficult to understand. Hence, the main goal of this application is to make the learning process interesting and help users master algorithms. The AlgoTutor application focuses on Data Structures and Artificial intelligence fields mainly, because these two fields define the most important aspects of computer science domain that are responsible for creating the future technology. Therefore, having knowledge of basic algorithms in the field of Data Structures and Artificial Intelligence has become the basic necessity for Computer Scientists. Currently, the AlgoTutor application helps users to understand and learn A-Star Algorithm, which is the best search algorithm and can be used as a pathfinder in various applications, robotics, and games. One such application of A-Star Algorithm is solving Sliding Brick Puzzle.
